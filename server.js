@@ -6,7 +6,7 @@ const PORT = 5500;
 const HOST = '192.168.0.145';
 
 // Define la carpeta de archivos estáticos (la carpeta raíz del proyecto)
-app.use('/images', express.static(path.join(__dirname, '')));
+app.use('/images/', express.static(path.join(__dirname, '')));
 /*
 // Ruta para el archivo index.html
 app.get('/', (req, res) => {
