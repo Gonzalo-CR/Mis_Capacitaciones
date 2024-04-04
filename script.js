@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     const nombreArchivo = archivo.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
                     const diplomaHTML = `
                         <div class="diploma">
-                            <img src="${misDiplomas}${archivo}" alt="" class="diploma-img" data-file="${nombreArchivo}" title="${nombreArchivo}">
+                            <img src="${archivo}" alt="" class="diploma-img" data-file="${nombreArchivo}" title="${nombreArchivo}">
                         </div>
                     `;
                     container.insertAdjacentHTML('beforeend', diplomaHTML);
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function openModal() {
         modal.style.display = "block";
-        modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
+        modalImg.src = `${images[currentImageIndex]}`;
         captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
     }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function prevSlide() {
         if (currentImageIndex > 0) {
             currentImageIndex--;
-            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
+            modalImg.src = `${images[currentImageIndex]}`;
             captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
         }
     }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function nextSlide() {
         if (currentImageIndex < images.length - 1) {
             currentImageIndex++;
-            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
+            modalImg.src = `${images[currentImageIndex]}`;
             captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
         }
     }
