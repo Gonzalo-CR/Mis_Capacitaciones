@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function openModal() {
         modal.style.display = "block";
-        modalImg.src = `${images[currentImageIndex]}`;
+        modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
         captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
     }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function prevSlide() {
         if (currentImageIndex > 0) {
             currentImageIndex--;
-            modalImg.src = `${images[currentImageIndex]}`;
+            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
             captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
         }
     }
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function nextSlide() {
         if (currentImageIndex < images.length - 1) {
             currentImageIndex++;
-            modalImg.src = `${images[currentImageIndex]}`;
+            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
             captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
         }
     }
@@ -90,12 +90,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     
-/* // Elemento del footer
- const footer = document.getElementById("footer");
-
- // Agregar evento de clic al footer
- footer.addEventListener("click", function() {
-     // Abrir una ventana con el correo electrónico
-     window.open("gonzalocorralesruiz@gmail.com");
- });*/
 });
