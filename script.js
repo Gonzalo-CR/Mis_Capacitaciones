@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentImageIndex = 0;
     let images = [];
 
-    const misDiplomas = 'images';
+    const misDiplomas = './images/';
 
     fetch(misDiplomas)
         .then(response => response.text())
