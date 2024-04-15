@@ -78,14 +78,14 @@ main {
         width: 100%; 
     }
 }
-
+*/
 @media screen and (max-width: 479px) {
     .diploma {
         width: calc(100% - 22px);
         max-width: none; 
     }
 }
-*/
+
 footer {
     color: rgb(24, 91, 6);
     background-color: rgb(58, 58, 58);
