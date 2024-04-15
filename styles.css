@@ -59,6 +59,20 @@ main {
     border-radius: 5px; /* Bordes redondeados */
 }
 
+/* Consulta de medios para pantallas de celulares con un ancho inferior a 480px */
+@media screen and (max-width: 480px) {
+    .diploma {
+        width: calc(50% - 22px); /* Ancho del certificado (50% del contenedor menos el margen entre certificados) */
+    }
+}
+
+/* Consulta de medios para pantallas de celulares con un ancho inferior a 320px */
+@media screen and (max-width: 320px) {
+    .diploma {
+        width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
+    }
+}
+
 footer {
     color: rgb(24, 91, 6);
     background-color: rgb(58, 58, 58);
