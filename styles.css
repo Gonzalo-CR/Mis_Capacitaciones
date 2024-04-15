@@ -49,7 +49,7 @@ main {
 }
 
 .diploma {
-    width: calc(25% - 22px); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
+    width: calc(35% - 22px); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
     height: auto; /* Altura automática según el contenido */
     margin: 0.07em; /* Espaciado entre certificados */
     display: inline-block;
