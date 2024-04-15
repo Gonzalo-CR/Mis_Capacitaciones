@@ -42,7 +42,7 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-items: space-evenly;
+    justify-content: space-evenly;
     width: 100%;
     max-width: 1200px;
     height: 100%;
@@ -52,7 +52,7 @@ main {
 }
 
 .diploma {
-    width: calc(33.3% - 1.7em); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
+    width: calc(33.33% - 1.7em); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
     height: auto; /* Altura automática según el contenido */
     margin: 0.7em; /* Espaciado entre certificados */
     display: inline-block;
@@ -70,18 +70,18 @@ main {
 
 @media screen and (max-width: 1024px) and (min-width: 326px) {
     .container {
-        width: calc(50% - 22px);
+        width: calc(50% - 1.7em);
         max-width: none;
     }
 
-    .diploma img {
+   /* .diploma img {
         width: 100%; 
-    }
+    } */
 }
 
 @media screen and (max-width: 325px) {
     .diploma {
-        width: calc(100% - 22px);
+        width: calc(100% - 1.7em);
         max-width: none; 
     }
 }
