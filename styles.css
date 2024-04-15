@@ -68,9 +68,9 @@ main {
     border-radius: 0.345em; /* Bordes redondeados */
 }
 /*
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1024px) and (min-width: 480px) {
     .container {
-        width: calc(33.33% - 22px);
+        width: calc(50% - 22px);
         max-width: none;
     }
 
