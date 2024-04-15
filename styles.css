@@ -70,7 +70,7 @@ main {
 
 @media screen and (max-width: 720px) and (min-width: 480px) {
     .diploma {
-        width: calc(50% - 22px);
+        width: calc(45% - 22px);
         max-width: none;
     }
 
