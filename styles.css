@@ -67,7 +67,7 @@ main {
     border: 1px solid #ddd; /* Borde para resaltar el certificado */
     border-radius: 0.345em; /* Bordes redondeados */
 }
-/*
+
 @media screen and (max-width: 1024px) and (min-width: 480px) {
     .container {
         width: calc(50% - 22px);
@@ -78,7 +78,7 @@ main {
         width: 100%; 
     }
 }
-*/
+
 @media screen and (max-width: 479px) {
     .diploma {
         width: calc(100% - 22px);
