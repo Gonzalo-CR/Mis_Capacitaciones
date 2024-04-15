@@ -10,7 +10,7 @@ body {
     text-align: center;
     /* background-color: rgba(128, 128, 128, 0.386); */
     font-family: Arial, sans-serif;
-    margin: 0.5em;
+    margin: 0.05em;
     padding: 0;
 }
 
@@ -19,9 +19,9 @@ header {
     background-color: rgb(84, 149, 233);
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 0.1em 0;
     border-radius: 0.25em;
-    width: 80%;
+    width: 90%;
 }
 
 main {
@@ -31,7 +31,7 @@ main {
     align-items: center;
     background-color: rgba(128, 128, 128, 0.586);
     margin: 0.5em;
-    width: 80%;
+    width: 90%;
     border-radius: 0.25em;
 }
 
@@ -39,14 +39,14 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1.2em;
     overflow-y: auto;
 }
 
 .diploma {
-    width: calc(25% - 22px); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
+    width: calc(25% - 1.33em); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
     height: auto; /* Altura automática según el contenido */
-    margin: 10px; /* Espaciado entre certificados */
+    margin: 0.7em; /* Espaciado entre certificados */
     display: inline-block;
     box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
     text-align: center;
@@ -58,27 +58,27 @@ main {
     width: 100%; /* Ajustar imagen al tamaño del contenedor */
     height: auto; /* Altura automática según el ancho */
     border: 1px solid #ddd; /* Borde para resaltar el certificado */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 0.345em; /* Bordes redondeados */
 }
 
 
 @media screen and (max-width: 480px) and (min-width: 320px) {
     .diploma {
-        width: calc(50% - 22px); 
+        width: calc(50% - 1.33em); 
     }
 
     .diploma img {
-        width: calc(50% - 22px); 
+        width: calc(50% - 1.33em); 
     }
 }
 
 /* Consulta de medios para pantallas de celulares con un ancho inferior a 320px */
 @media screen and (max-width: 319px) {
     .diploma {
-        width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
+        width: calc(100% - 1.33em); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
     }
     .diploma img {
-        width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
+        width: calc(100% - 1.33em); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
     }
 }
 
@@ -86,8 +86,8 @@ footer {
     color: rgb(24, 91, 6);
     background-color: rgb(58, 58, 58);
     text-align: center;
-    padding: 0.7em 0;
-    width: 80%;
+    padding: 0.07em 0;
+    width: 90%;
     border-radius: 0.25em;
 }
 
@@ -98,8 +98,8 @@ footer {
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -110,6 +110,8 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 70%; /* Tamaño fijo del 30% de la pantalla */
+    height: auto;
+    max-height: 90vh;
     padding: 20px;
     border: 5px solid black; /* Borde negro con grosor de 5px */
     border-radius: 5%; /* Bordes redondeados al 15% */
