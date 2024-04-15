@@ -70,7 +70,7 @@ main {
 
 @media screen and (max-width: 1024px) and (min-width: 326px) {
     .container {
-        width: calc(50% - 1.7em);
+        width: calc(50% - 22px);
         max-width: none;
     }
 
@@ -81,7 +81,7 @@ main {
 
 @media screen and (max-width: 325px) {
     .diploma {
-        width: calc(100% - 1.7em);
+        width: calc(100% - 22px);
         max-width: none; 
     }
 }
