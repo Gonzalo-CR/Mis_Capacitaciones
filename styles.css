@@ -113,7 +113,8 @@ footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 70%; /* Tamaño fijo del 30% de la pantalla */
+    width: auto; /* Tamaño fijo del 30% de la pantalla */
+    max-width: 70%;
     height: auto;
     max-height: 90vh;
     padding: 20px;
