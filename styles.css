@@ -62,7 +62,7 @@ main {
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (min-width: 320px) {
     .diploma {
         width: calc(50% - 22px); 
     }
@@ -73,7 +73,7 @@ main {
 }
 
 /* Consulta de medios para pantallas de celulares con un ancho inferior a 320px */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
     .diploma {
         width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
     }
