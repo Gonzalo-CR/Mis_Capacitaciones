@@ -63,27 +63,22 @@ main {
     border-radius: 0.345em; /* Bordes redondeados */
 }
 
-/*
-@media screen and (max-width: 480px) and (min-width: 320px) {
+@media screen and (min-width: 480px) {
     .diploma {
-        width: calc(50% - 22px); 
+        width: calc(33.33% - 22px); /* Ancho del certificado (33.33% del contenedor menos el margen entre certificados) */
+        max-width: none; /* Ancho máximo no establecido */
     }
 
     .diploma img {
-        width: calc(50% - 22px); 
+        width: 100%; /* Ajustar imagen al tamaño del contenedor */
     }
 }
-*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 479px) {
     .diploma {
-        width: calc(100% - 22px); 
-        min-width: 280px !important;
-        min-height: 232px !important;
+        width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
+        max-width: none; /* Ancho máximo no establecido */
     }
-    .diploma img {
-        width: 100%;
-    } 
 }
 
 footer {
