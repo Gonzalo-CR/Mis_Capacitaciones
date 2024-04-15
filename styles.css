@@ -42,7 +42,7 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly; 
+    justify-items: space-evenly; 
     width: 100%;
     max-width: 1200px;
     height: 100%;
