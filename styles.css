@@ -36,11 +36,11 @@ main {
 }
 
 .container {
-    display: flex;
+    /*display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-items: space-evenly;
+    justify-items: space-evenly;*/
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -66,7 +66,7 @@ main {
 }
 
 @media screen and (min-width: 480px) {
-    .cantainer {
+    .container {
         width: calc(33.33% - 22px); /* Ancho del certificado (33.33% del contenedor menos el margen entre certificados) */
         max-width: none; /* Ancho máximo no establecido */
     }
