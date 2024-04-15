@@ -115,7 +115,7 @@ footer {
     transform: translate(-50%, -50%);
     width: auto; /* Tamaño fijo del 30% de la pantalla */
     max-width: 90%;
-    max-height: 90vh;
+    max-height: 80vh;
     padding: 20px;
     border: 5px solid black; /* Borde negro con grosor de 5px */
     border-radius: 5%; /* Bordes redondeados al 15% */
@@ -149,7 +149,7 @@ footer {
     background-color: #000; /* Fondo negro */
     padding: 10px; /* Espaciado interno */
     text-align: center; /* Centrar el texto */
-    font-size: 28px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
