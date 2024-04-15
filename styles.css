@@ -52,7 +52,7 @@ main {
 }
 
 .diploma {
-    width: calc(33.33% - 1.7em); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
+    width: calc(33.3% - 1.7em); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
     height: auto; /* Altura automática según el contenido */
     margin: 0.7em; /* Espaciado entre certificados */
     display: inline-block;
@@ -69,7 +69,7 @@ main {
 }
 
 @media screen and (max-width: 1024px) and (min-width: 326px) {
-    .container {
+    .diploma {
         width: calc(50% - 22px);
         max-width: none;
     }
