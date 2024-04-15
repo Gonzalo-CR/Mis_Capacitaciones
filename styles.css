@@ -46,7 +46,7 @@ main {
 .diploma {
     width: calc(25% - 22px); /* Ancho del certificado (25% del contenedor menos el margen entre certificados) */
     height: auto; /* Altura automática según el contenido */
-    min-height: 232px;
+    min-height: 232px !important;
     margin: 0.07em; /* Espaciado entre certificados */
     display: inline-block;
     box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
