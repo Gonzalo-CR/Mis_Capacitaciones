@@ -114,13 +114,19 @@ footer {
     top: 50%;
     transform: translate(-50%, -50%);
     width: auto; /* Tamaño fijo del 30% de la pantalla */
-    max-width: 70%;
-    height: auto;
+    max-width: 90%;
     max-height: 90vh;
     padding: 20px;
     border: 5px solid black; /* Borde negro con grosor de 5px */
     border-radius: 5%; /* Bordes redondeados al 15% */
     background-color: #fefefe;
+}
+
+.modal-content img {
+    width: 100%; /* Ajustar la imagen al 100% del ancho del contenedor */
+    height: auto; /* Altura automática según el ancho para mantener la proporción */
+    max-width: 100%; /* Ancho máximo del 100% del ancho del contenedor */
+    max-height: 100%; /* Altura máxima del 100% del alto del contenedor */
 }
 
 .close {
