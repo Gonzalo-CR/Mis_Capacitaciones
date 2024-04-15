@@ -38,11 +38,11 @@ main {
 }
 
 .container {
-    display: flex;
+  /*  display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-items: space-evenly; 
+    justify-items: space-evenly; */
     width: 100%;
     max-width: 1200px;
     height: 100%;
