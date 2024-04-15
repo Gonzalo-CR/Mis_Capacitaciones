@@ -36,6 +36,9 @@ main {
 }
 
 .container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -50,8 +53,7 @@ main {
     display: inline-block;
     box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
     text-align: center;
-    align-items: center;
-    justify-items: center;
+    
 }
 
 .diploma img {
