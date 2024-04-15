@@ -36,9 +36,9 @@ main {
 }
 
 .container {
-    display: flex;
+   /* display: flex;
     align-items: center;
-    justify-items: center;
+    justify-items: center;*/
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
