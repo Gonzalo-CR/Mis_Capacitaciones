@@ -78,7 +78,7 @@ main {
 @media screen and (max-width: 480px) {
     .diploma {
         width: calc(100% - 22px); 
-        min-width: 280px;
+        min-width: 280px !important;
         min-height: 232px !important;
     }
     .diploma img {
