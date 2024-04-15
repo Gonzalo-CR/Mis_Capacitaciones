@@ -64,7 +64,7 @@ main {
     border: 1px solid #ddd; /* Borde para resaltar el certificado */
     border-radius: 0.345em; /* Bordes redondeados */
 }
-
+/*
 @media screen and (min-width: 480px) {
     .container {
         width: calc(33.33% - 22px); /* Ancho del certificado (33.33% del contenedor menos el margen entre certificados) */
@@ -82,7 +82,7 @@ main {
         max-width: none; /* Ancho máximo no establecido */
     }
 }
-
+*/
 footer {
     color: rgb(24, 91, 6);
     background-color: rgb(58, 58, 58);
