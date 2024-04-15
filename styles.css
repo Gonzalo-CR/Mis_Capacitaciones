@@ -68,7 +68,7 @@ main {
     border-radius: 0.345em; /* Bordes redondeados */
 }
 
-@media screen and (max-width: 1024px) and (min-width: 480px) {
+@media screen and (max-width: 1024px) and (min-width: 326px) {
     .container {
         width: calc(50% - 22px);
         max-width: none;
@@ -79,7 +79,7 @@ main {
     }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 325px) {
     .diploma {
         width: calc(100% - 22px);
         max-width: none; 
