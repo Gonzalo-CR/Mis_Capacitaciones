@@ -50,6 +50,8 @@ main {
     display: inline-block;
     box-sizing: border-box; /* Incluir el padding y el borde en el ancho total */
     text-align: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .diploma img {
