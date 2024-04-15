@@ -78,9 +78,9 @@ main {
     .diploma {
         width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
     }
-    .diploma img {
-        width: calc(100% - 22px); /* Ancho del certificado (100% del contenedor menos el margen entre certificados) */
-    }
+   /* .diploma img {
+        width: calc(100% - 22px);
+    } */
 }
 
 footer {
