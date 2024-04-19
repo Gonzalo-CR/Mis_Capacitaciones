@@ -67,6 +67,10 @@ main {
     border: 1px solid #ddd; /* Borde para resaltar el certificado */
     border-radius: 0.345em; /* Bordes redondeados */
 }
+.diploma img:hover {
+    transform: scale(1.07);
+}
+
 
 @media screen and (max-width: 720px) and (min-width: 480px) {
     .diploma {
