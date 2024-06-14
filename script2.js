@@ -35,34 +35,39 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error("Error al obtener los archivos de la carpeta de imágenes:", error));
 
-    function openModal(index) {
-        currentImageIndex = index;
-        modal.style.display = "block";
-        updateModalContent();
-        modalImg.addEventListener('touchstart', handleTouchStart);
-        modalImg.addEventListener('touchmove', handleTouchMove);
-    }
-
-    function updateModalContent() {
-        modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
-        captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
-    }
-
-    let initialX = 0;
-    let currentX = 0;
-
-    function handleTouchStart(event) {
-        initialX = event.touches[0].clientX;
-    }
-
-    function handleTouchMove(event) {
-        currentX = event.touches[0].clientX;
-        const deltaX = currentX - initialX;
-        const newLeft = Math.max(0, Math.min(modalImg.offsetLeft + deltaX, modalImg.offsetWidth - modalImg.clientWidth));
-        modalImg.style.left = `${newLeft}px`;
-        event.preventDefault();
-    }
-
+        function openModal(index) {
+            currentImageIndex = index;
+            modal.style.display = "block";
+            updateModalContent();
+            modalImg.addEventListener('touchstart', handleTouchStart);
+            modalImg.addEventListener('touchmove', handleTouchMove);
+          }
+        
+          function updateModalContent() {
+            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
+            captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
+          }
+        
+          let initialX = 0;
+          let threshold = 50; // minimum swipe distance to change image
+        
+          function handleTouchStart(event) {
+            initialX = event.touches[0].clientX;
+          }
+        
+          function handleTouchMove(event) {
+            currentX = event.touches[0].clientX;
+            const deltaX = currentX - initialX;
+        
+            // Check for swipe direction and minimum distance
+            if (deltaX > threshold) {
+              prevSlide(); // Swipe left, go to previous image
+            } else if (deltaX < -threshold) {
+              nextSlide(); // Swipe right, go to next image
+            }
+        
+            event.preventDefault();
+          }
     function closeModalFunction() {
         modal.style.display = "none";
     }
