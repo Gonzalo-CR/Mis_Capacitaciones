@@ -47,8 +47,33 @@ document.addEventListener("DOMContentLoaded", function() {
         modal.style.display = "block";
         modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
         captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
+        modalImg.addEventListener('touchstart', handleTouchStart);
+        modalImg.addEventListener('touchmove', handleTouchMove);
+    }
+        
+    let initialX = 0;
+    let currentX = 0;
+
+    function handleTouchStart(event) {
+    initialX = event.touches[0].clientX;
     }
 
+    function handleTouchMove(event) {
+    currentX = event.touches[0].clientX;
+    const deltaX = currentX - initialX;
+    const newLeft = modalImg.offsetLeft + deltaX;
+    modalImg.style.left = `${newLeft}px`;
+        
+    const maxLeft = modalImg.offsetWidth - modalImg.clientWidth;
+    const minLeft = 0;
+
+    const newLeft = Math.max(minLeft, Math.min(newLeft, maxLeft));
+    modalImg.style.left = `${newLeft}px`;
+
+     event.preventDefault();
+    }
+
+    
     function closeModalFunction() {
         modal.style.display = "none";
     }
