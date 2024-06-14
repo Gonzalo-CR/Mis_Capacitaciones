@@ -9,75 +9,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentImageIndex = 0;
     let images = [];
-
     const misDiplomas = 'images/';
 
     fetch('images2.json')
         .then(response => response.json())
         .then(imageFiles => {
             images = imageFiles;
-
             images.forEach(archivo => {
                 const nombreArchivo = archivo.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
                 const diplomaHTML = `
                     <div class="diploma">
-                        <img src="${misDiplomas}${archivo}" alt="" class="diploma-img" data-file="${nombreArchivo}" title="${nombreArchivo}">
+                        <img src="${misDiplomas}${archivo}" alt="${nombreArchivo}" class="diploma-img" data-file="${nombreArchivo}" title="${nombreArchivo}">
                     </div>
                 `;
                 container.insertAdjacentHTML('beforeend', diplomaHTML);
             });
 
-            const diplomaImgs = document.querySelectorAll('.diploma-img');
-
-            diplomaImgs.forEach((img, index) => {
-                img.addEventListener('click', function() {
-                    currentImageIndex = index;
-                    openModal();
-                });
+            document.querySelectorAll('.diploma-img').forEach((img, index) => {
+                img.addEventListener('click', () => openModal(index));
             });
 
             closeModal.addEventListener('click', closeModalFunction);
             prevButton.addEventListener('click', prevSlide);
             nextButton.addEventListener('click', nextSlide);
-
         })
         .catch(error => console.error("Error al obtener los archivos de la carpeta de imágenes:", error));
 
-    function openModal() {
+    function openModal(index) {
+        currentImageIndex = index;
         modal.style.display = "block";
-        modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
-        captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
+        updateModalContent();
         modalImg.addEventListener('touchstart', handleTouchStart);
         modalImg.addEventListener('touchmove', handleTouchMove);
     }
 
+    function updateModalContent() {
+        modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
+        captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
+    }
 
     let initialX = 0;
     let currentX = 0;
 
     function handleTouchStart(event) {
-    initialX = event.touches[0].clientX;
+        initialX = event.touches[0].clientX;
     }
 
     function handleTouchMove(event) {
-    currentX = event.touches[0].clientX;
-    const deltaX = currentX - initialX;
-    const newLeft = modalImg.offsetLeft + deltaX;
-    modalImg.style.left = `${newLeft}px`;
-        
-    const maxLeft = modalImg.offsetWidth - modalImg.clientWidth;
-    const minLeft = 0;
-
-    const newLeft = Math.max(minLeft, Math.min(newLeft, maxLeft));
-    modalImg.style.left = `${newLeft}px`;
-
-     event.preventDefault();
+        currentX = event.touches[0].clientX;
+        const deltaX = currentX - initialX;
+        const newLeft = Math.max(0, Math.min(modalImg.offsetLeft + deltaX, modalImg.offsetWidth - modalImg.clientWidth));
+        modalImg.style.left = `${newLeft}px`;
+        event.preventDefault();
     }
 
-
-    
-    
-    
     function closeModalFunction() {
         modal.style.display = "none";
     }
@@ -85,16 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function prevSlide() {
         if (currentImageIndex > 0) {
             currentImageIndex--;
-            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
-            captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
+            updateModalContent();
         }
     }
 
     function nextSlide() {
         if (currentImageIndex < images.length - 1) {
             currentImageIndex++;
-            modalImg.src = `${misDiplomas}${images[currentImageIndex]}`;
-            captionText.textContent = images[currentImageIndex].replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '');
+            updateModalContent();
         }
     }
 
