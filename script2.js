@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const misDiplomas = 'images/';
 
-    fetch('images.json')
+    fetch('images2.json')
         .then(response => response.json())
         .then(imageFiles => {
             images = imageFiles;
