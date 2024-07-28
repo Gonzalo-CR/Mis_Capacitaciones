@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let images = [];
     const misDiplomas = 'images/';
 
-    fetch('../JSON/ia.json')
+    fetch('JSON/ia.json')
         .then(response => response.json())
         .then(imageFiles => {
             images = imageFiles;
